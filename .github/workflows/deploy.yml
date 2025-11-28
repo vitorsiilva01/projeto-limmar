@@ -1,9 +1,11 @@
-name: Deploy - GitHub Pages
+name: Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -13,19 +15,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
       - name: Build
-        run: npm run build
+        run: |
+          npm install
+          npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
