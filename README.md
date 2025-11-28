@@ -82,7 +82,3 @@ O principal objetivo deste projeto é compreender as necessidades da empresa e o
 
 ## Aprendizados Efetivos
  Trabalho Em Equipe, Desenvolvimento De Sites, Aprendizado Em Linguagem De Programação.
-
-
- # Teste de commit para acionar o CI
-
