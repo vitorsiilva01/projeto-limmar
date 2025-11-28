@@ -1,0 +1,18 @@
+{
+  "name": "usinagemlimmar-backend",
+  "version": "0.1.0",
+  "description": "API mínima para integração com MySQL (XAMPP) - scaffold",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev:win": "set DEV_NO_DB=1&& node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.3.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "bcrypt": "^5.1.0"
+    ,"jsonwebtoken": "^9.0.0"
+  }
+}

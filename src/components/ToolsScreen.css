@@ -1,0 +1,317 @@
+/* Estilos específicos para a tela de ferramentas */
+.tools-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent-color);
+  font-size: 1.6rem;
+  text-align: left;
+  margin: 0;
+}
+
+.title-icon {
+  width: 36px;
+  height: 36px;
+  fill: var(--accent-color);
+  opacity: 0.95;
+}
+
+/* Grid Layout */
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Card Styles */
+.tools-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+/* Form Grid Layout */
+.tools-card form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Form Group Styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group .form-control {
+  height: 56px;
+  padding: 0 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.form-group .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 1px var(--accent-color), 0 0 15px rgba(93,223,255,0.15);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.form-group textarea.form-control {
+  min-height: 120px;
+  padding: 1.25rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* Make textarea and buttons span full width */
+.form-group:has(textarea),
+.form-group:last-child {
+  grid-column: span 3;
+}
+
+/* Tools List Styles */
+.tools-form {
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-input {
+  flex: 1;
+  height: 46px;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 1px var(--accent-color), 0 0 15px rgba(93,223,255,0.15);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 0.75rem;
+  border-radius: 999px;
+  background: rgba(93,223,255,0.08);
+  color: var(--accent-color);
+  font-weight: 600;
+  border: 1px solid rgba(93,223,255,0.08);
+}
+
+.card-title {
+  padding: 1.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-content {
+  padding: 1rem;
+  /* Removida a limitação de altura e rolagem interna para que a lista expanda naturalmente */
+  overflow: visible;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* Tools List */
+.tools-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tool-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.12);
+  border: 1px solid rgba(255,255,255,0.02);
+  transition: all 0.2s ease;
+}
+
+.tool-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.tool-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tool-code {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.tool-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tool-sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.tool-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Buttons */
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: rgba(255,255,255,0.9);
+}
+
+.btn-icon.btn-danger svg {
+  fill: var(--danger-color);
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.25rem 1rem;
+  color: var(--text-secondary);
+}
+
+.empty-icon {
+  width: 56px;
+  height: 56px;
+  fill: rgba(255,255,255,0.06);
+  margin-bottom: 0.75rem;
+}
+
+.empty-title {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0.25rem 0 0.25rem;
+}
+
+.empty-sub {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* Hover effects */
+.btn-icon:hover {
+  background: rgba(93,223,255,0.08);
+  border-color: rgba(93,223,255,0.15);
+}
+
+.btn-icon.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.15);
+}
+
+/* Error Message */
+.tools-error {
+  color: var(--danger-color);
+  background: rgba(226, 68, 68, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 980px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .tools-card {
+    max-width: 100%;
+  }
+
+  .tools-card form {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .tools-card .form-group {
+    min-width: 0;
+  }
+
+  .tools-form .form-control {
+    height: 48px;
+  }
+}
